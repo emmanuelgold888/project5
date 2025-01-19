@@ -1,4 +1,4 @@
-
+// Set constraints for the video stream
 var constraints = { video: { facingMode: "user" }, audio: false };
 
 const camerView = document.querySelector("#camera--view"),
@@ -16,4 +16,13 @@ function cameraStart(){
             .catch(function(error) {
                   console.error("Oops. Something is broken.", error);
             });
+}
+
+cameraTrigger.onclick = function(){
+      cameraSensor.width = cameraView.videoWidth;
+      cameraSensor.height = cameraView.videoHeight;
+
+      cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
+      cameraOutput.src = cameraSensor.toDataURL("image/webp");
+      cameraOutput.classList.add("taken");
 }
