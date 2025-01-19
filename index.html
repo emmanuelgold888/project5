@@ -1,30 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<meta charset="utf-8">
+<title>Display Webcam Stream</title>
+ 
+<style>
+#container {
+	margin: 0px auto;
+	width: 500px;
+	height: 375px;
+	border: 10px #333 solid;
+}
+#videoElement {
+	width: 500px;
+	height: 375px;
+	background-color: #666;
+}
+</style>
+</head>
+ 
+<body>
+<div id="container">
+	<video autoplay="true" id="videoElement">
+	
+	</video>
+</div>
+<script>
 
-		<!-- Name of your awesome camera-app -->
-		<title>Camera App</title>
-
-		<!-- Link to your main style sheet-->
-		<!--<link rel="stylesheet" href="style.css">-->
-	</head>
-	<body>
-		<!-- Camera -->
-
-		<p><video id="video" autoplay="autoplay"></video></p>
-		<p><input type="button" id="buttonSnap" value="Take screenshot" disabled="disabled" onclick="snapshot()" /></p>
-		<p>
-			<input type="button" id="buttonStart" value="Start" disabled="disabled" onclick="start()" />
-			<input type="button" id="buttonStop" value="Stop" disabled="disabled" onclick="stop()" />
-		</p>
-		<p><canvas id="canvas"></canvas></p> 
-		
-		<!-- Reference to your Javascript file -->
-		<script src="app.js"></script>
-
-		
-	</body>
+</script>
+</body>
 </html>
